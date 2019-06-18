@@ -39,5 +39,6 @@ sys_call:
 .type svc_handler, %function
 .global svc_handler
 svc_handler:
-	mov r0, lr
-	b svc_handler_c
+	mov r0, lr// 把exec_return給r0也就是handler
+	b svc_handler_c //回到svc_handler_c函式
+	
